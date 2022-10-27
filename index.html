@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Monitoring </title>
+ </head>
+    <body>
+     <table border="0">
+        <th>Status:</th>
+        <th id="status"></th>
+     </table>
+       <table border="0">
+        <th>Pesan:</th>
+        <th id="Pesan">Null</th>
+     </table>
+     <table border="8">
+     	<tr>
+     		<th>
+                ID
+     		</th>
+            <th>
+                Value
+            </th>
+     	</tr>
+     	<tr>
+     		<td
+     			id="subs">Null
+     		</td>
+            <td
+            id="motor">Null
+            </td>
+     	</tr>
+     </table>
+
+  <label for="fname">Topic:</label><br>
+  <input type="text" id="t1" name="fname" value=><br>
+  <label for="lname">Payload:</label><br>
+  <input type="text" id="t2" name="lname" value=><br>
+  <p id="warn"></p>
+  <p>Retain:</p>
+  <input type="checkbox" id="ret" name="ret" value=true onchange="publish()">
+  <label for="True">True</label><br>
+  
+  <button onclick="add()">Send</button>
+
+            <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+            <script src="script.js"></script>
+    </body>
+</html>
